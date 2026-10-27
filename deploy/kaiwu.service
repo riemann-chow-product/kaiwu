@@ -1,0 +1,21 @@
+[Unit]
+Description=Kaiwu portfolio (Next.js)
+After=network.target
+
+[Service]
+Type=simple
+# 改成实际运行用户（有权限写 /opt/kaiwu/data）
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/kaiwu
+Environment=NODE_ENV=production
+Environment=PORT=4310
+EnvironmentFile=-/opt/kaiwu/.env.production
+ExecStart=/usr/bin/npm start
+Restart=always
+RestartSec=3
+# 单进程：JSON 存储不支持多实例，不要用 cluster
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

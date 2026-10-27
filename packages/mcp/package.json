@@ -1,0 +1,14 @@
+{
+  "name": "@kaiwu/mcp-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "开物 MCP Server：让智能体可以按能力找人，也能替人上架仓库",
+  "bin": {
+    "kaiwu-mcp": "./server.mjs"
+  },
+  "main": "./server.mjs",
+  "engines": {
+    "node": ">=20"
+  }
+}

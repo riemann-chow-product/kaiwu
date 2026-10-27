@@ -1,0 +1,26 @@
+{
+  "name": "kaiwu",
+  "version": "0.1.0",
+  "private": true,
+  "description": "开物 Kaiwu — 多租户开发者作品空间，贴一个 GitHub 链接即可 AI 识别上架",
+  "scripts": {
+    "dev": "next dev -p 4310",
+    "build": "next build",
+    "start": "next start -p 4310",
+    "seed": "node scripts/seed.mjs",
+    "test": "tsx --test tests/*.test.ts",
+    "verify:card": "node scripts/verify-card.mjs"
+  },
+  "dependencies": {
+    "next": "15.1.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.7.3"
+  }
+}

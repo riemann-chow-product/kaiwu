@@ -1,0 +1,9 @@
+# Caddy 自动 HTTPS 配置
+# 1) 把 your-domain.com 换成你的域名
+# 2) sudo cp deploy/Caddyfile /etc/caddy/Caddyfile && sudo systemctl reload caddy
+# Caddy 会自动向 Let's Encrypt 申请并续期证书，无需手动跑 certbot。
+
+your-domain.com, www.your-domain.com {
+	encode gzip zstd
+	reverse_proxy 127.0.0.1:4310
+}
